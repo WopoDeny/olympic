@@ -1,0 +1,22 @@
+version: '3'
+
+services:
+  server:
+    build: ./backend 
+    volumes:
+      - ./backend:/olimpiad
+    ports:
+      - 3000:3000
+    expose:
+      - 3000
+
+  client:
+    container_name: vue_server
+    restart: always
+    build: ./frontend/front-olimp
+    volumes:
+      - ./frontend/front-olimp:/user/src/app
+    ports:
+      - 8080:8080
+    depends_on:
+    - server
