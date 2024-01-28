@@ -67,7 +67,6 @@ export default{
 }
 .olimp-title{
     margin-top: 200px;
-    margin-left: 120px;
     font-family: 'IBM Plex Serif';
     font-style: normal;
     font-weight: 400;
@@ -79,7 +78,6 @@ export default{
     color: #000000;
 }
 .wrap-text{
-    margin-left: 60px;
     width: 1000px;
     height: 93px;
     font-family: 'IBM Plex Serif';

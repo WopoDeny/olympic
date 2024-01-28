@@ -6,9 +6,9 @@
         <img class="avatar" src="../assets/images/avatar.jpg">
         <div class="user-info-table">
 
-          <div>{{ name }}</div> <!--Имя Фамилия-->
-          <div v-if="class_">{{ class_ }} класс</div> <!--Класс-->
-          <div v-if="school">{{ school }} школа</div> <!--Школа-->
+          <strong>{{ name }}</strong> <!--Имя Фамилия-->
+          <div v-if="class_">Класс <strong>{{ class_ }}</strong></div> <!--Класс-->
+          <div v-if="school">Школа <strong>{{ school }}</strong></div> <!--Школа-->
         </div>
       </div>
 
@@ -90,7 +90,8 @@ export default {
     async mounted(){
       try{
         const response = await this.$api.auth.getlk(window.localStorage.getItem('userId'))
-        this.name = response.data.user.split(' ')[0]
+        const names = response.data.user.split(' ');
+        this.name = names[0] + ' ' + names[1][0] + '. ' + names[2][0]
         this.lastname = response.data.user.split(' ')[1]
         this.class_ = response.data.class
         this.school = response.data.school
@@ -196,11 +197,15 @@ h3 {
   margin-left: 20%;
   margin-right: 20%;
   height: 63px;
-  background: #FFFFFF;
+  background: #f4f6ff;
   border-radius: 5px;
 }
 
 .user-info-table {
+  * {
+    font-size: 22px;
+  }
+
   margin-left: 20px;
   display: flex;
   flex-direction: column;

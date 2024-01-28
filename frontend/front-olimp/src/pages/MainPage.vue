@@ -50,8 +50,12 @@ export default {
   padding: 10px;
   margin-top: 40px;
   border: none;
-  background: #3D3D3D;
+  background: #0f204e;
   border-radius: 4px;
+}
+
+p {
+  margin: 0;
 }
 
 .sign-up-button-text{

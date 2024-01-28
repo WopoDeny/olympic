@@ -58,7 +58,7 @@
   }
   
   input {
-    background: #F2F2F2;
+    background: #fff;
     border: none;
     width: 300px;
     border-radius: 4px;
@@ -68,8 +68,11 @@
   
   .string {
     margin: 5px;
+    padding: 10px;
+    outline: 1px solid lightgray;
+    border-radius: 6px;
   }
-  
+
   span {
     font-family: 'IBM Plex Serif';
     font-style: normal;
@@ -80,7 +83,7 @@
   form {
     display: flex;
     flex-direction: column;
-    align-items: flex-end;
+    align-items: center;
     margin-bottom: 30px;
   }
   
@@ -112,7 +115,7 @@
     align-items: center;
     margin-top: 120px;
     width: 440px;
-    background: #FFFFFF;
+    background: #f4f6ff;
     border-radius: 5px;
   }
   </style>

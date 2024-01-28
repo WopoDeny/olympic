@@ -58,7 +58,7 @@ export default {
 }
 
 input {
-  background: #F2F2F2;
+  background: #fff;
   border: none;
   width: 300px;
   border-radius: 4px;
@@ -80,7 +80,7 @@ span {
 form {
   display: flex;
   flex-direction: column;
-  align-items: flex-end;
+  align-items: center;
   margin-bottom: 30px;
 }
 
@@ -112,7 +112,7 @@ form {
   align-items: center;
   margin-top: 120px;
   width: 440px;
-  background: #FFFFFF;
+  background: #f4f6ff;
   border-radius: 5px;
 }
 </style>

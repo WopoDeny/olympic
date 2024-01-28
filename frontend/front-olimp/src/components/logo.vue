@@ -1,6 +1,8 @@
 <template>
   <div class="logo">
-    <img class="logo-image" src="../assets/images/emblem.svg">
+    <a href="/" style="z-index: 1000">
+      <img style="z-index: 10" class="logo-image" src="../assets/images/emblem.svg">
+    </a>
   </div>
 </template>
 <script>
@@ -21,9 +23,10 @@ export default {
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   border-radius: 0px 0px 100px 100px;
 }
+
 .logo-image {
   width: 103px;
-  left: calc(50% - 103px/2);
+  left: calc(50% - 103px / 2);
   top: 0px;
   bottom: 13px;
 }

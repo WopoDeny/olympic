@@ -50,38 +50,15 @@ export default {
 
 <style scoped>
 .btn {
-  margin-right: 9vw;
-  margin-top: 10px;
   border: none;
   background-color: #373636;
   color: #FFFFFF;
   border-radius: 5px;
-}
-
-.margin-left {
-  margin-left: 5px;
-}
-
-.title-end {
-  margin-top: 30px;
-  display: flex;
-  justify-content: center;
-  align-items: flex-end;
-}
-
-.padding {
-  padding-bottom: 10px;
-}
-
-.media-auth {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  margin-top: 10px;
 }
 
 input {
-  background: #F2F2F2;
+  background: #fff;
   border: none;
   width: 300px;
   border-radius: 4px;
@@ -90,7 +67,11 @@ input {
 }
 
 .string {
+  width: 100%;
   margin: 5px;
+  padding: 10px;
+  outline: 1px solid lightgray;
+  border-radius: 6px;
 }
 
 span {
@@ -103,41 +84,9 @@ span {
 form {
   display: flex;
   flex-direction: column;
-  align-items: flex-end;
+  align-items: center;
+  justify-content: center;
   margin-bottom: 30px;
-}
-
-.back-container {
-  position: absolute;
-  width: 1512px;
-  height: 982px;
-  left: 0px;
-  top: 0px;
-}
-
-.title-p {
-  margin: 20px;
-  padding-top: 20px;
-  font-family: 'IBM Plex Serif';
-  font-style: normal;
-  font-weight: 400;
-  font-size: 30px;
-  line-height: 26px;
-  align-items: center;
-  text-align: center;
-
-  color: #373636;
-}
-
-.container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin-top: 200px;
-  width: 440px;
-  height: 440px;
-  background: #FFFFFF;
-  border-radius: 5px;
 }
 </style>
   
