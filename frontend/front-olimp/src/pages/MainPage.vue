@@ -11,7 +11,7 @@
 
         <div class="main-page-login-buttons">
           <button class="sign-up-button">
-            <p class="sign-up-button-text" @click="$router.push({ name: 'register' })">Зарегистрироваться</p>
+            <p class="sign-up-button-text" @click="$router.push({ name: 'register' })">Регистрация</p>
           </button>
 
           <div class="main-page-auth-buttons">

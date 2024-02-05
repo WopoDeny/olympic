@@ -1,6 +1,5 @@
 <template>
  <div class="start-olympic-page">
-   <header-vue/>
      <div class="start-olympic-page-container">
        <h1>{{title}}</h1>
        <p class="main-text">Задания расчитаны на учащихся 9-11 классов.
@@ -21,11 +20,9 @@
 </template>
 
 <script>
-import headerVue from '../components/header'
 
-export default { 
+export default {
   name : 'startOlympicPage',
-   components : {headerVue},
    async mounted(){
     try{
       // set data to store
@@ -50,7 +47,6 @@ export default {
 
 <style>
 .start-olympic-page-container {
-  margin-top: 120px;
   padding-left: 20%;
   padding-right: 20%;
   justify-content: center;

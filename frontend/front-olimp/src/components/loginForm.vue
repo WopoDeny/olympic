@@ -37,7 +37,7 @@ export default {
         window.localStorage.setItem('authFlag', true); // !!!!!!!!!!! потом исправить
         window.localStorage.setItem('userId', response.data.id_user) // понадобиться для отправки решений задачи
         this.$router.push({ name: 'personalCabinet' })
-        
+
       } catch (e) {
         console.log(e)
       }
@@ -45,8 +45,8 @@ export default {
   }
 }
 </script>
-  
-  
+
+
 
 <style scoped>
 .btn {
@@ -89,4 +89,3 @@ form {
   margin-bottom: 30px;
 }
 </style>
-  

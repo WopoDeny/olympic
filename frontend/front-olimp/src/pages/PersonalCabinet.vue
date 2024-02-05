@@ -1,6 +1,6 @@
 <template>
   <div class="personal-page">
-    <headerVue />
+<!--    <headerVue />-->
     <div class="personal-page-container">
       <div class="personal-info-container">
         <img class="avatar" src="../assets/images/avatar.jpg">
@@ -52,7 +52,7 @@
           <div class='popup-not-started' hidden=true>
             Олимпиада ещё не началась!
           </div>
-          
+
           <div class='popup-ended' hidden=true>
             Олимпиада закончилась!
           </div>
@@ -69,7 +69,7 @@
 
 
 <script>
-import headerVue from '../components/header.vue'
+// import headerVue from '../components/header.vue'
 
 const options = {
   year: 'numeric',
@@ -79,9 +79,9 @@ const options = {
   minute: 'numeric'
 }
 
-export default { 
-    name : 'Personal_Page', 
-    components :  {headerVue},
+export default {
+    name : 'Personal_Page',
+    // components :  {headerVue},
     created(){
       if(window.localStorage.getItem('authFlag')=='false'){ // if not authorized -> redirect -> mainPage
         this.$router.push({name: 'mainPage'})
@@ -119,7 +119,7 @@ export default {
       }catch(e){
         console.log(e)
       }
-      
+
     },
     data(){
       return {
@@ -150,7 +150,7 @@ export default {
           }else{// olimp is ended
               document.getElementsByClassName('popup-ended')[id-1].hidden = false // show popup
               setTimeout(()=>{document.getElementsByClassName('popup-ended')[id-1].hidden=true}, 2000)// wait 2 sec ahd hide
-          } 
+          }
 
         }else{
           document.getElementsByClassName('popup-not-started')[id-1].hidden = false // show popup
@@ -171,6 +171,10 @@ export default {
 </script>
 
 <style scoped>
+.personal-page {
+  padding-top: 90px;
+}
+
 .padding-top {
   padding-top: 10px;
 }
@@ -202,10 +206,6 @@ h3 {
 }
 
 .user-info-table {
-  * {
-    font-size: 22px;
-  }
-
   margin-left: 20px;
   display: flex;
   flex-direction: column;

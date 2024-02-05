@@ -32,7 +32,7 @@ export default{
             score: null,
             username: ''
         }
-        
+
     },
     methods:{
         async toLeaderBoard(){
@@ -48,16 +48,15 @@ export default{
             }
         }
     }
-       
-   
-    
+
+
+
 }
 </script>
 <style scoped>
 .congrat-page{
     width: 100%;
     height: 100%;
-    background: #F2F2F2;
 }
 .content{
     display: flex;

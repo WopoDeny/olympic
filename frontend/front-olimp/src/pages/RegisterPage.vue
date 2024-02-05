@@ -1,12 +1,8 @@
 <template>
   <div class="back-container">
-    <headVue />
     <div class="container">
       <div class="title-p">Регистрация</div>
       <registerForm />
-      <div class="media-auth">
-        <yandexAuthVue class="padding" />
-      </div>
       <div class="title-end">
         Уже зарегистрированы?
         <div class="margin-left pointer" @click="$router.push({ name: 'login' })">Войти</div>
@@ -16,16 +12,12 @@
 </template>
 
 <script>
-import headVue from "@/components/header";
-import yandexAuthVue from "@/components/yandexAuth.vue";
 import registerForm from "@/components/registerForm";
 
 
 export default {
   name: 'registerPage',
   components: {
-    headVue,
-    yandexAuthVue,
     registerForm
   }
 }
@@ -86,8 +78,9 @@ form {
 
 .back-container {
   position: absolute;
-  left: 0px;
-  top: 0px;
+  left: 0;
+  top: 0;
+  padding-top: 90px;
   width: 100vw;
   height: 100vh;
 }
@@ -110,7 +103,6 @@ form {
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-top: 120px;
   width: 440px;
   background: #f4f6ff;
   border-radius: 5px;

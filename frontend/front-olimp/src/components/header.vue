@@ -1,5 +1,5 @@
 <template>
-  <div class = "header">
+  <div class="header">
     <logo />
     <div class="logo-header"/>
     <div class="title">Военно-космическая академия имени А.Ф. Можайского</div>
@@ -21,6 +21,8 @@
   position: fixed;
   width: 100%;
   height: 70px;
+  top: 0;
+  z-index: 100000;
   display: flex;
   justify-content: center;
   background: #0f204e;

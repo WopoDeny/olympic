@@ -1,6 +1,5 @@
 <template>
   <div class="back-container">
-    <headerVue />
     <div class="workspace">
       <div class="left-side">
         <div v-for="task in tasks" :key="task.id" class="task-container">
@@ -55,12 +54,10 @@
 
 
 <script>
-import headerVue from '../components/header'
 import timerVue from '../old_components/timer.vue'
 export default {
   name: 'olimpPage',
   components: {
-    headerVue,
     timerVue
   },
   created(){
@@ -115,7 +112,7 @@ export default {
     async postAnswers(){
       for(let i=0; i<this.questions.length; i++){
           let payload = {
-          id_olimpiad:  window.localStorage.getItem('olimId'), 
+          id_olimpiad:  window.localStorage.getItem('olimId'),
           id_user: window.localStorage.getItem('userId'),
           id_guestions: this.list_id_questions[i],
           user_answers: this.user_answers[i]
@@ -127,15 +124,15 @@ export default {
                 console.log(response)
             }catch(e){
               console.log(e)
-            } 
+            }
           } else{
             continue;
-          } 
+          }
       }
       this.$router.push({name: 'end'})
     },
     hintHandler(id){
-      this.tasks[id].show_hint = this.tasks[id].show_hint == false ? true : false   
+      this.tasks[id].show_hint = this.tasks[id].show_hint == false ? true : false
     }
   },
 }
@@ -155,30 +152,6 @@ export default {
   font-style: normal;
   font-weight: 400;
   font-size: 16px;
-}
-
-.right {
-  display: flex;
-  justify-content: flex-end;
-  align-items: center;
-  margin-right: 135px;
-}
-
-.save {
-  margin-top: 15px;
-  background: #3D3D3D;
-  border-radius: 5px;
-  font-family: 'IBM Plex Serif';
-  font-style: normal;
-  font-weight: 400;
-  font-size: 15px;
-  line-height: 20px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border: none;
-
-  color: #FFFFFF;
 }
 
 .timer {
@@ -231,7 +204,6 @@ export default {
 .right-side {
   position:fixed;
   left: 75vw;
-  margin-top: 120px;
   margin-right: 100px;
   width: 30%;
   max-width: 250px;
@@ -239,6 +211,7 @@ export default {
 
 .task-list {
   display: grid;
+  padding-top: 110px;
   grid-template-rows: repeat(auto-fill, 45px);
   grid-template-columns: repeat(auto-fill, 45px);
   grid-auto-columns: 100px;
@@ -247,17 +220,10 @@ export default {
 
 .workspace {
   display: flex;
-  background-color: #F2F2F2;
 }
 
 .reply {
   margin: 5px;
-}
-
-.answer-options {
-  display: flex;
-  flex-direction: column;
-  margin-left: 10px;
 }
 
 .answer {
@@ -308,19 +274,16 @@ export default {
 }
 
 .back-container {
-  position: absolute;
+  padding-top: 50px;
   width: 100%;
 }
 
 .task-container {
   display: flex;
-  margin-bottom: 100px;
   flex-direction: column;
-  margin-left: 100px;
-  margin-top: 120px;
   width: 60%;
   background: #FFFFFF;
   border-radius: 10px;
-  margin-right: 100px;
+  margin: 120px 100px 100px;
 }
 </style>
