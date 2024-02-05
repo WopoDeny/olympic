@@ -2,7 +2,7 @@ import VueRouter from 'vue-router'
 import * as Vue from 'vue'
 console.log(Vue)
 import mainPage from "../pages/MainPage";
-// import home from '../home.vue'
+import CongratsPage from "../pages/CongratsPage";
 import registerPage from '../pages/RegisterPage.vue'
 import Auth from '../components/auth.vue'
 import leaderboard from '../pages/leaderPage.vue'
@@ -19,12 +19,17 @@ export default new VueRouter({
         name: "mainPage",
         component: mainPage
         },
-        {        
+        {
+            path: '/greeting',
+            name: "CongratsPage",
+            component: CongratsPage
+        },
+        {
             path: '/register',
             name: "register",
             component: registerPage
         },
-        {        
+        {
             path: '/login',
             name: "login",
             component: signInPage

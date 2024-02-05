@@ -3,7 +3,7 @@ const router  = express.Router();
 const jwt = require('jsonwebtoken');
 const passport = require('passport');
 
-/* POST login. */
+/* POST login. */   
 router.post('/', function (req, res, next) {
     passport.authenticate('local', {session: false}, (err, user, info) => {
         if (err || !user) {

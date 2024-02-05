@@ -1,27 +1,92 @@
 <template>
   <div class="main-page">
-    <header-vue/>
     <div class="main-page-container">
-      <p class="main-text">Приглашаем вас принять участие в нашей олимпиаде. <br>
+      <p class="main-text">Приглашаем вас принять участие в нашей олимпиаде.<br>
         <br> Проверьте свои знания и навыки в области информатики и математики</p>
-      <button class="sign-up-button">
-        <p class="sign-up-button-text" @click="$router.push({ name: 'register' })">Зарегистрироваться</p>
-      </button>
+
+      <div class="main-page-buttons-wrapper">
+        <button class="sign-up-button">
+          <p class="sign-up-button-text" @click="$router.push({ name: 'CongratsPage' })">Об олимпиаде</p>
+        </button>
+
+        <div class="main-page-login-buttons">
+          <button class="sign-up-button">
+            <p class="sign-up-button-text" @click="$router.push({ name: 'register' })">Зарегистрироваться</p>
+          </button>
+
+          <div class="main-page-auth-buttons">
+            <button class="sign-up-button">
+              <p class="sign-up-button-text" @click="$router.push({ name: 'login' })">Войти</p>
+            </button>
+            <button class="sign-up-button-yandex">
+              <a class="sign-up-button-text" href="https://oauth.yandex.ru/authorize?response_type=token&client_id=e5684b66613f4cf1b3658e06514b4d75">
+                <img class="main-page-yandex-icon" src="../assets/images/yandex-icon.png" alt="Войти через yandex">
+                Яндекс ID
+              </a>
+            </button>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 </template>
 
 <script>
-import headerVue from "@/components/header";
 export default {
   name: 'mainPage',
-  components: {
-    headerVue
-  }
 }
 </script>
 
 <style scoped>
+.main-page-yandex-icon {
+  margin-right: 10px;
+}
+
+.sign-up-button-yandex {
+  background: black;
+  border-radius: 12px;
+  padding: 0 25px;
+  transition: 200ms;
+}
+
+.sign-up-button-yandex:hover {
+  background: #4d4c4c;
+}
+
+.sign-up-button-yandex p {
+  font-size: 26px !important;
+}
+
+.main-page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10px
+}
+
+.main-page-buttons-wrapper {
+  justify-content: space-between;
+  margin-top: 40px;
+  display: flex;
+  align-items: start;
+  gap: 20px;
+}
+
+.main-page-login-buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 10px
+}
+
+.main-page-auth-buttons {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 5px;
+}
+
 .main-page-container {
   padding-left: 20%;
   padding-right: 20%;
@@ -47,18 +112,26 @@ export default {
 }
 
 .sign-up-button {
-  padding: 10px;
-  margin-top: 40px;
+  padding: 0px 10px;
   border: none;
   background: #0f204e;
-  border-radius: 4px;
+  border-radius: 10px;
+  transition: 200ms;
+}
+
+.sign-up-button p {
+  font-size: 26px !important;
+}
+
+.sign-up-button:hover {
+  background: #354d86;
 }
 
 p {
   margin: 0;
 }
 
-.sign-up-button-text{
+.sign-up-button-text {
   font-family: 'IBM Plex Serif';
   font-style: normal;
   font-weight: 400;
@@ -69,6 +142,16 @@ p {
   justify-content: center;
   color: #FFFFFF;
 }
+
+a.sign-up-button-text:link,
+a.sign-up-button-text:visited {
+  font-size: 22px;
+}
+
+a.sign-up-button-text:hover {
+  text-decoration: none;
+}
+
 .main-page {
   flex-direction: column;
   width: 100vw;
