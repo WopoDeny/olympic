@@ -64,6 +64,7 @@ export default {
 <style scoped>
 a.sponsor-link:link,
 a.sponsor-link:visited {
+  display: inline !important;
   text-decoration: none;
   color: black;
   transition: 100ms;
