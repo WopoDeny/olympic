@@ -51,4 +51,11 @@
   align-items: center;
   justify-content: center;
 }
+
+@media (max-width: 820px) {
+  .title {
+    font-size: 18px;
+    margin-left: 135px;
+  }
+}
 </style>

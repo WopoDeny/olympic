@@ -22,8 +22,20 @@ export default {
 
 .logo-image {
   width: 103px;
-  left: calc(50% - 103px / 2);
-  top: 0;
-  bottom: 13px;
+}
+
+@media (max-width: 820px) {
+  .logo {
+    display: flex;
+    justify-content: center;
+    width: 80px;
+    height: 80px;
+    left: 20px;
+    top: 0;
+  }
+
+  .logo-image {
+    width: 60px;
+  }
 }
 </style>

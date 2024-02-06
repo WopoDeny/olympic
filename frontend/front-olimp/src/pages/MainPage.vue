@@ -98,8 +98,8 @@ export default {
 
 }
 
-.main-text{
-  margin-top:100px;
+.main-text {
+  margin-top: 120px;
   font-family: 'IBM Plex Serif';
   font-style: normal;
   font-weight: 400;
@@ -157,5 +157,28 @@ a.sign-up-button-text:hover {
   width: 100vw;
   height: 100vh;
   display: flex;
+}
+
+/* Адаптив */
+@media (max-width: 820px) {
+  .main-text {
+    font-size: 30px;
+  }
+
+  .main-page-buttons-wrapper {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .main-page-container {
+    padding: 0 5%;
+  }
+}
+
+@media (max-width: 820px){
+  .main-page-buttons-wrapper {
+    flex-direction: column;
+    align-items: stretch;
+  }
 }
 </style>
