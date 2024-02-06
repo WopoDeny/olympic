@@ -62,8 +62,8 @@ export default {
 </script>
 
 <style scoped>
-.sponsor-link:link,
-.sponsor-link:visited {
+a.sponsor-link:link,
+a.sponsor-link:visited {
   text-decoration: none;
   color: black;
   transition: 100ms;
@@ -79,7 +79,7 @@ export default {
   font-size: 18px;
 }
 
-.sponsor-link:hover {
+a.sponsor-link:hover {
   color: #545b87;
 }
 
