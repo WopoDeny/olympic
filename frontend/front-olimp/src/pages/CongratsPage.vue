@@ -30,9 +30,9 @@
         Олимпиада проводится при поддержке
       </h4>
       <ol>
-        <li><a class="sponsor-link" target="_blank" href="https://www.78isb.ru/">ООО «Инновационные системы безопасности»</a></li>
+        <li><a class="sponsor11-link11" target="_blank" href="https://www.78isb.ru/">ООО «Инновационные системы безопасности»</a></li>
         <li>
-          <a class="sponsor-link" target="_blank" href="https://www.78isb.ru/">Центр защиты информации ГК «Конфидент»</a><br>
+          <a class="sponsor11-link11" target="_blank" href="https://www.78isb.ru/">Центр защиты информации ГК «Конфидент»</a><br>
           <img class="sponsor-img" src="../assets/images/sponsor-2.png" alt="Центр защиты информации ГК «Конфидент»" />
           <p class="sponsor-desc">Российский разработчик линейки средств защиты информации.
             Решения компании применяются для защиты конфиденциальной информации, в том числе содержащейся в ГИС, ИСПДн и АСУ ТП, значимых объектах КИИ и сведений, составляющих гостайну до уровня «совершенно секретно».
@@ -62,8 +62,8 @@ export default {
 </script>
 
 <style scoped>
-a.sponsor-link:link,
-a.sponsor-link:visited {
+a.sponsor11-link11:link,
+a.sponsor11-link11:visited {
   display: inline !important;
   text-decoration: none;
   color: black;
@@ -80,7 +80,7 @@ a.sponsor-link:visited {
   font-size: 18px;
 }
 
-a.sponsor-link:hover {
+a.sponsor11-link11:hover {
   color: #545b87;
 }
 
