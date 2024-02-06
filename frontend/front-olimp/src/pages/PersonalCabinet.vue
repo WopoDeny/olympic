@@ -33,20 +33,20 @@
                 {{ olimp.timeString }}
               </p>
             </div>
-            <!--leaderboard-->
-            <div class="padding-top">
-              <button class="olympic-result-button" @click="toLeaderBoard(olimp.id)">
-                <img class="olympic-result" src="../assets/images/olympic-result.svg">
-              </button>
+
+            <div class="personal-page-buttons-wrapper">
+              <div class="padding-top">
+                <button class="olympic-result-button" @click="toLeaderBoard(olimp.id)">
+                  <img class="olympic-result" src="../assets/images/olympic-result.svg">
+                </button>
+              </div>
+              <div>
+                <button class="olympic-sing-in-button" @click="startOlimp(olimp.id, olimp.isStarted)">
+                  Начать
+                </button>
+              </div>
             </div>
 
-
-            <div>
-              <button class="olympic-sing-in-button" @click="startOlimp(olimp.id, olimp.isStarted)">
-                Начать
-              </button>
-
-            </div>
 
           </div>
           <div class='popup-not-started' hidden=true>
@@ -175,19 +175,17 @@ export default {
   padding-top: 90px;
 }
 
-.padding-top {
-  padding-top: 10px;
-}
-
 h3 {
   padding: 10px;
 }
+
 .personal-info-container {
   display: flex;
   margin-left: 235px;
   margin-top:30px;
   margin-bottom: 30px;
 }
+
 .avatar {
   width:100px;
   height: 100px;
@@ -222,7 +220,7 @@ h3 {
   background: #FBFBFB;
   border-radius: 5px;
   align-items: baseline;
-  grid-template-columns: 0.1fr 2.5fr 1.2fr 0.5fr 1fr;
+  grid-template-columns: 0.1fr 2.5fr 1.2fr 1fr;
 
 }
 
@@ -257,4 +255,33 @@ h3 {
   border-radius: 5px;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.2);
 }
+
+.personal-page-buttons-wrapper {
+  display: flex;
+  gap: 10px;
+}
+
+@media (max-width: 820px) {
+  .personal-info-container {
+    justify-content: center;
+    margin-left: 0;
+  }
+
+  .olympiad-info-container {
+    margin: 0 5%;
+  }
+
+  .info-block {
+    grid-template-columns: 0.1fr 2.5fr 1.2fr 1fr;
+  }
+
+  .personal-page-buttons-wrapper {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-self: start;
+  }
+}
+
 </style>

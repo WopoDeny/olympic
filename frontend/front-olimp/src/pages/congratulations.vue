@@ -77,7 +77,6 @@ export default{
     color: #000000;
 }
 .wrap-text{
-    width: 1000px;
     height: 93px;
     font-family: 'IBM Plex Serif';
     font-style: normal;

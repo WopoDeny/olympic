@@ -286,4 +286,39 @@ export default {
   border-radius: 10px;
   margin: 120px 100px 100px;
 }
+
+
+@media (max-width: 820px) {
+  .right-side {
+    top: 0;
+    left: 0;
+    width: 100%;
+    max-width: 100%;
+    padding: 0 40px;
+    margin: 0;
+    background: rgba(0 0 0 / 10%);
+    backdrop-filter: blur(10px);
+  }
+
+  .task-list {
+    justify-content: center;
+  }
+
+  .workspace {
+    width: 100%;
+  }
+
+  .task-container {
+    width: 100%;
+    margin: 0;
+  }
+
+  .left-side {
+    display: flex;
+    flex-direction: column;
+    gap: 100px;
+    margin-top: 350px;
+  }
+}
+
 </style>

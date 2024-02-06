@@ -41,10 +41,10 @@
         </li>
       </ol>
 
-      <p class="greeting-page-title">
+      <p>
         Регистрация участников доступна до: <b>23:59 09 февраля 2024 года</b>
       </p>
-      <p class="greeting-page-title">
+      <p>
         Даты проведения олимпиады: <b>10–11 февраля 2024 года</b>
       </p>
     </div>
@@ -87,11 +87,13 @@ a.sponsor11-link11:hover {
 p {
   font-size: 22px;
   text-indent: 30px;
+  text-align: justify;
 }
 
 li {
   font-size: 22px;
   list-style: inside;
+  text-align: justify;
 }
 
 .greeting-page-container {
@@ -121,5 +123,29 @@ li {
 
 .greeting-page-title:not(:first-child) {
   margin-top: 24px;
+}
+
+@media (max-width: 820px) {
+  .greeting-page-container {
+    padding: 130px 10px 30px 10px;
+  }
+
+  .sponsor-img {
+    width: 200px;
+    margin-left: 10px;
+  }
+
+  .sponsor-desc {
+    font-size: 14px;
+  }
+
+  p, li {
+    font-size: 18px;
+    text-indent: 15px;
+  }
+
+  .greeting-page-title {
+    font-size: 28px;
+  }
 }
 </style>

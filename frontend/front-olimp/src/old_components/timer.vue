@@ -4,7 +4,7 @@
     </div>
 </template>
 <script>
-/* Предлагаю задавать время окончания написания олимпиады через пропсы таймера, если просто отсчет времени делать, 
+/* Предлагаю задавать время окончания написания олимпиады через пропсы таймера, если просто отсчет времени делать,
 то при перезагрузке страницы таймер будет сбрачываться */
 export default {
     name: 'timer',
@@ -25,14 +25,14 @@ export default {
         // реализация отсчета времени
         countTime(target){
             let now = Date.now(); // узнаем текущее время
-            let diff = parseInt((target - now)/1000); // получим разность во времени в секундах 
+            let diff = parseInt((target - now)/1000); // получим разность во времени в секундах
             if(diff>0){
             this.time.divMinutes =  parseInt((diff%(24*60*60))/(60*60))*60+parseInt((diff%(60*60)/60)); // считаем остаток минут
             this.time.divSeconds = diff%60;
             }else {
                 clearTimeout(this.timer); // прекращение счета
             }
-            
+
         },
         startTiming(endTimestamp){
             this.timer = setInterval(this.countTime,1000, endTimestamp);
@@ -46,12 +46,11 @@ export default {
 .timer-cell{
     display: table-cell;
     width: 139px;
-    height: 118px;
     text-align: center;
     vertical-align:middle;
     font-family: 'Roboto';
     font-size: 32px;
-    color: #000000; 
+    color: #000000;
 }
 
 </style>
