@@ -110,7 +110,7 @@ export default {
           this.olimpiads.push({
             id: olimpIds[i],
             title: titles[i],
-            time_end: time_end[i]*1000,
+            time_end: time_end[i],
             timeString: timeStrings[i],
             isStarted: isStarted[i],
             workTime: work_times[i]
