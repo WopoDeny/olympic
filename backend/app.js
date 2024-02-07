@@ -16,7 +16,7 @@ app.use(cookieParser());
 require('./controllers/passport');
 
 
-app.use(bodyParser.urlencoded({ extended: false })); 
+app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 
 //var salt = '$2b$10$qKhi8e4Il9pyNGFt8JOkfe' // Соль для штфрования добавляет строку к хешу/
