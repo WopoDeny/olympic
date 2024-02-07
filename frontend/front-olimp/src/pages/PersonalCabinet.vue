@@ -104,7 +104,7 @@ export default {
         let work_times = response.data.list_time_work
         window.localStorage.setItem('getTime', false )
         for(let i=0;i<time_end.length; i++){
-          timeStrings.push(this.convertTimeStemp2String(time_end[i]))
+          timeStrings.push(this.convertTimeStemp2String(time_end[i] / 1000))
         }
         for(let i=0; i<titles.length; i++){
           this.olimpiads.push({
