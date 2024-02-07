@@ -91,7 +91,7 @@ export default {
       try{
         const response = await this.$api.auth.getlk(window.localStorage.getItem('userId'))
         const names = response.data.user.split(' ');
-        this.name = names[0] + ' ' + names[1][0] + '. ' + names[2][0]
+        this.name = names[0] + ' ' + names[1][0] + '. ' + names[2][0] + '.'
         this.lastname = response.data.user.split(' ')[1]
         this.class_ = response.data.class
         this.school = response.data.school
@@ -139,10 +139,10 @@ export default {
       startOlimp(id, flag){
         if(!flag){
           let now = new Date().getTime()
-          if( now<this.olimpiads[id-1].time_end*1000 ){
+          if( now<this.olimpiads[id-1].time_end ){
             if(window.localStorage.getItem('getTime') === 'false'){
             const now = new Date().getTime()
-            window.localStorage.setItem('endTime', now + this.olimpiads[id-1].workTime*1000)
+            window.localStorage.setItem('endTime', now + this.olimpiads[id-1].workTime)
             window.localStorage.setItem('getTime', true)
             }
             window.localStorage.setItem('olimId', id); // swith on olimpiad
@@ -159,7 +159,7 @@ export default {
       },
       toLeaderBoard(id){
         let now = new Date().getTime()
-        if(now > this.olimpiads[id-1].time_end*1000){
+        if(now > this.olimpiads[id-1].time_end){
           this.$router.push({name:'results'}) // go to leaderboard
         }else{
           document.getElementsByClassName('not-ended')[id-1].hidden= false // show popup
