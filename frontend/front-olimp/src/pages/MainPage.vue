@@ -3,7 +3,6 @@
     <div class="main-page-container">
       <p class="main-text">Приглашаем вас принять участие в нашей олимпиаде.<br>
         <br> Проверьте свои знания и навыки в области информатики и математики</p>
-      <p>А вот это будет видно????</p>
 
       <div class="main-page-buttons-wrapper">
         <button class="sign-up-button">
