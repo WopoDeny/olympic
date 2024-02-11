@@ -5,7 +5,8 @@ const QuestionsBD = require("../models/questions");
 const AnswersBD = require("../models/answers");
 const DescriptionBD = require("../models/description");
 const OlimpiadBD = require("../models/olimpiad")
-
+const SupplementBD = require("../models/supplement");
+let fs = require('fs');
 
 router.get('/:id', async (req, res) => {
     let id = Number(req.params.id)
@@ -34,9 +35,9 @@ router.get('/:id', async (req, res) => {
         }
         j = 0;
         list_answers_all = [];
-        list_score = [];
+        list_score = [1,1,1,1,1,2,1,2,2,1,3,3,5,3,5,5];
         list_discription = [];
-
+        list_name_suppliement = [];
     while (j < list_id_questions.length){
         const answers = await AnswersBD.findAll({where:{
             id_questions:list_id_questions[j]
@@ -45,6 +46,19 @@ router.get('/:id', async (req, res) => {
             const discription = await DescriptionBD.findOne({where:{
                 id_question:answers[0].id_questions
             }})
+
+            const suppliement = await SupplementBD.findOne({where:{
+                id_question_s : answers[0].id_questions
+            }})
+            if (suppliement){
+                list_name_suppliement.push(suppliement.path_supplement)
+                //list_files.push(suppliement.supplement)
+                console.log(suppliement.path_supplement)
+            }
+            else {
+                list_name_suppliement.push('no_supplement')
+            }
+
             list_discription.push(discription.text);
             len_answers = 0;
             list_answer_one_quesion =[];
@@ -52,11 +66,11 @@ router.get('/:id', async (req, res) => {
             while (len_answers<answers.length){
                 //console.log(answers[len_answers].text)
                 list_answer_one_quesion.push(answers[len_answers].text)
-                score += answers[len_answers].status
+            //    score += answers[len_answers].status
                 len_answers ++ 
             }
             list_answers_all.push(list_answer_one_quesion)
-            list_score.push(score)
+          //  list_score.push(score)
         }
         else{
             console.log('фигня')
@@ -90,6 +104,7 @@ router.get('/:id', async (req, res) => {
              list_type:list_type,
              list_id_questions:list_id_questions,
              list_discription:list_discription,
+             list_name_suppliement:list_name_suppliement,
              work_time:olimp.work_time,
          })
     // if (answers){

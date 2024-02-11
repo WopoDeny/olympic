@@ -33,11 +33,14 @@ router.get('/', async (req, res)=> {
 
 if (user && olimpiad){
     console.log('Личный кабинет открыт');
-    
+    let school_string = " ";
+    let class_string = " ";
+    if(school_string !=null)school_string = user.school;
+    if(class_string !=null)class_string = user.class;
     res.json({
         user: user.name,
-        class: user.class,
-        school:user.school,
+        class: class_string,
+        school:school_string,
         olimpiads:list_name_olimpiad,
         start_olimpiads:list_time_start,
         list_id_olimpiad:list_id_olimpiad,

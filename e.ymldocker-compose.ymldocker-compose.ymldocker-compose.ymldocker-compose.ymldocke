@@ -1,0 +1,35 @@
+[1mdiff --git a/docker-compose.yml b/docker-compose.yml[m
+[1mindex 06d6aaa..7707c6c 100644[m
+[1m--- a/docker-compose.yml[m
+[1m+++ b/docker-compose.yml[m
+[36m@@ -2,21 +2,21 @@[m [mversion: 3.9'[m
+ [m
+ services:[m
+   server:[m
+[31m-    build: ./backend [m
+[32m+[m[32m    build:[m
+[32m+[m[32m      context: ./backend[m
+[32m+[m[32m      dockerfile: Dockerfile[m
+     volumes:[m
+       - ./backend:/olimpiad[m
+     ports:[m
+       - 3000:3000[m
+[31m-    expose:[m
+[31m-      - 3000[m
+[32m+[m[32m    restart: always[m
+ [m
+   client:[m
+[31m-    container_name: vue_server[m
+     restart: always[m
+[31m-    build: ./frontend/front-olimp[m
+[31m-    volumes:[m
+[31m-      - ./frontend/front-olimp:/user/src/app[m
+[32m+[m[32m    build:[m
+[32m+[m[32m      context: ./frontend/front-olimp[m
+[32m+[m[32m      dockerfile: Dockerfile[m
+     ports:[m
+       - 8080:8080[m
+     depends_on:[m
+[31m-    - server[m
+\ No newline at end of file[m
+[32m+[m[32m      - server[m

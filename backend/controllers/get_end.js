@@ -20,12 +20,7 @@ router.get('/result', async (req, res) => {
         score_user = 0;
         i = 0;
         while (i < user_score.length){
-            if(user_score[i].status == 1){
-                score_user += user_score[i].status
-            }
-            if (user_score[i].status == 0){
-                score_user -= user_score[i].status
-            }
+            score_user += user_score[i].status
             i++;
         }
     }

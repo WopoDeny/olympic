@@ -12,11 +12,11 @@ const app = express();
 
 app.use(cors())
 app.use(cookieParser());
-
+app.use(express.static('public'));
 require('./controllers/passport');
 
 
-app.use(bodyParser.urlencoded({ extended: false }));
+app.use(bodyParser.urlencoded({ extended: false })); 
 app.use(bodyParser.json());
 
 //var salt = '$2b$10$qKhi8e4Il9pyNGFt8JOkfe' // Соль для штфрования добавляет строку к хешу/
@@ -34,6 +34,7 @@ app.use(express.urlencoded({ extended: true }));
 
 
 // Configure api
+var api_get_download_file = require('./controllers/get_file')
 var api_reqisterController = require('./controllers/reqister');
 var apiAuth = require("./controllers/auth");
 var api_logout = require("./controllers/logout");
@@ -50,6 +51,7 @@ var api_get_LeaderboardController = require('./controllers/get_leaderBoard')
 
 
 
+app.use('/api/download', api_get_download_file);
 app.use('/api/reqister', api_reqisterController);
 app.use('/api/auth', apiAuth);
 app.use('/api/logout', api_logout);
